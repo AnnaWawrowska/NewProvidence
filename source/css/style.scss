@@ -1,0 +1,22 @@
+@charset 'utf-8';
+
+/* ------------------------------------------ */
+/*         STYLES COMPILED WITH SASS          */
+/*      Naming conceptions of the files:      */
+/*            BEM CSS METHODOLOGY:            */
+/*            http://en.bem.info/             */
+/* ------------------------------------------ */
+
+/* -- Helpers -- */
+@import 'helpers/normalize';
+@import 'helpers/include-media';
+@import 'helpers/fonts';
+@import 'helpers/colors';
+
+@import 'helpers/general';
+@import 'helpers/typography';
+
+/* -- Vendors -- */
+
+/* -- Elements -- */
+@import 'components/header';

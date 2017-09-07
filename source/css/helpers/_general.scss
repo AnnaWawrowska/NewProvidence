@@ -35,11 +35,18 @@ fieldset {
 // ---------------------------------------------------
 
 body {
-
+font-family: $font--primary;
 	color: $color--black; }
 
 $breakpoints: (phone: 565px, tablet: 860px, desktop: 1440px);
 
 .container {
+	width: 1170px;
 	margin: 0 auto;
+}
+
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }

@@ -1,0 +1,29 @@
+// ----------------clients---------------------
+
+.clients {
+	height: 110px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__text {
+		background-color: $color--gray;
+		&:after {
+			content: "";
+			position: relative;
+			left: 170px;
+			top: 31px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 110px 65px 0 0;
+			border-color: $color--gray transparent transparent transparent;
+		}
+
+	}
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 910px;
+	}
+}

@@ -17,6 +17,14 @@
 @import 'helpers/typography';
 
 /* -- Vendors -- */
-
+@import 'vendor/font-awesome.min.css';
 /* -- Elements -- */
 @import 'components/header';
+@import 'components/nav';
+@import 'components/section';
+@import 'components/hero';
+@import 'components/buttons';
+@import 'components/clients';
+@import 'components/aboutUs';
+@import 'components/experience';
+@import 'components/services';

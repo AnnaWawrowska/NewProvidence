@@ -1,0 +1,68 @@
+// ---------------------------------------------
+
+.section {
+	&__heading {
+		color: $color--lighter-gray;
+		padding-bottom: 16px;
+		span{
+			font-size: 50px;
+			display: block;
+		}
+		&:after {
+			content: "";
+			display: block;
+			width: 36px;
+			border: 3px solid #f0ab00;
+			margin-top: 26px;
+		}
+
+
+		&--big {
+			font-size: 54px;
+			line-height: 65px;
+			padding-bottom: 23px;
+			span{
+				font-size: 90px;
+				display: block;
+			}
+			&:after {
+				content: "";
+				display: block;
+				width: 74px;
+				border: 3px solid $color--white;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+		}
+
+		&--margin-top {
+			&:after {
+				margin-top: 15px;
+			}
+		}
+	}
+
+	&__describe {
+		&--big {
+			font-size: 16px;
+			line-height: 40px;
+		}
+	}
+
+	&--hero {
+		background-image: url("../img/bg--hero.png");
+		background-color: #313036;
+		// height: 107vh;
+		height: 985px;
+	}
+	&--about {
+		height: 665px;
+		background-color: $color--gray;
+		background-image: url("../img/img-men.png");
+		background-repeat: no-repeat;
+		background-position: 3% 97%;
+	}
+	&--experience {
+		height: 605px;
+	}
+}

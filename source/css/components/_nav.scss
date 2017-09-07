@@ -1,0 +1,18 @@
+// ------------------nav---------------------------
+
+.nav {
+	@media screen and (min-width: 1171px) {
+		margin-right: -139px;
+	}
+	&__list {
+		display: flex;
+		margin-bottom: 5px;
+	}
+	&__item {
+		color: $color--white;
+		font-size: 12px;
+		font-weight: 500;
+		text-transform: uppercase;
+		padding-left: 27px;
+	}
+}

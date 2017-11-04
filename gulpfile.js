@@ -50,13 +50,13 @@ gulp.task('images', function(){
 })
 
 gulp.task('copy', function() {
-  return gulp.src(['source/css/**/*.css', 'source/img/*'], {
+  return gulp.src(['source/css/**/*.css', 'source/img/*', 'source/js/**/*', 'source/font/*'], {
     base: 'source'
   })
   .pipe(gulp.dest('public_html/'))
 })
 
-gulp.task('bulid', function(cb) {
+gulp.task('build', function(cb) {
   runSequence('clean', 'html', 'copy', 'images', cb)
 });
 

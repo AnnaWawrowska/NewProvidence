@@ -41,32 +41,29 @@ body {
 	color: $color--black;
 }
 
+$breakpoints: (phone: 565px, tablet: 860px, desktop: 1440px);
 
 .container {
-	width: 1200px;
+	width: 1170px;
 	margin: 0 auto;
-	padding: 0 15px;
 	@media only screen and (max-width : 1200px) {
-	  width: 960px;
+	  width: 1024px;
 	}
 	@media only screen and (max-width : 1023px) {
-	   width: 720px;
+	   width: 1024px;
 	}
 	@media only screen and (max-width : 767px) {
-	  	width: 100%;
+	  	width: 740px;
 	}
-}
-
-.cf:after{
-	content: "";
-	display: table;
-	clear: both;
 }
 
 .flex-wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@media only screen and (max-width : 1200px) {
+	  margin: 0 20px;
+	}
 
 	&--wrap {
 		flex-wrap: wrap
@@ -74,7 +71,6 @@ body {
 	&--align-items {
 		align-items: flex-start;
 	}
-}
 .clear {
 	clear: both;
 }

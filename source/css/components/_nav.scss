@@ -1,9 +1,14 @@
 // ------------------nav---------------------------
 
 .nav {
-	@media screen and (min-width: 1171px) {
-		margin-right: -139px;
-	}
+	margin-right: -139px;
+@media only screen and (max-width : 1500px) {
+  margin-right: -5px;
+}
+@media only screen and (max-width : 767px) {
+  display: none;
+}
+
 	&__list {
 		display: flex;
 		margin-bottom: 5px;
@@ -13,6 +18,24 @@
 		font-size: 12px;
 		font-weight: 500;
 		text-transform: uppercase;
-		padding-left: 27px;
+		margin-left: 27px;
+		position: relative;
+		&:after {
+			content: "";
+			display: inline-block;
+			border-bottom: 1px solid $color--white;
+			width: 100%;
+			position: absolute;
+			top: 20px;
+			left: 0;
+			opacity: 0;
+			transition: all 0.4s ease;
+		}
+		&:hover {
+			&:after{
+				opacity: 0.9;
+				top: 15px;
+			}
+		}
 	}
 }

@@ -1,0 +1,61 @@
+// -----------------Industries---------------------
+
+.industries {
+	&__box {
+		width: 270px;
+		height: 170px;
+		border: 1px solid #e7eaed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 30px;
+		position: relative;
+		@media only screen and (max-width : 1200px) {
+			width: 23%;
+			padding: 0 20px;
+			text-align: center;
+		}
+		@media only screen and (max-width : 767px) {
+		  width: 48%;
+			height: 130px;
+			margin-bottom: 10px;
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			border: 10px solid $color--white;
+			width: 100%;
+			height: 100%;
+			background-color: $color--darker-gray;
+			opacity: 0;
+			transition: opacity 0.2s ease;
+		}
+		&:hover {
+			&:before {
+				opacity: 0.1;
+			}
+		}
+		&--big {
+			width: 49%;
+			align-self: flex-start;
+			@media only screen and (max-width : 767px) {
+			  width: 100%;
+				padding-bottom: 20px;
+			}
+		}
+		&--alt {
+			&:before {
+				display: none;
+			}
+		}
+	}
+	&__picture {
+		padding-top: 35px;
+		padding-bottom: 10px;
+		@media only screen and (max-width : 1200px) {
+		  padding-top: 0;
+		}
+	}
+}

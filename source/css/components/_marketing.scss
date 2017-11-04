@@ -1,0 +1,42 @@
+// ----------------Marketing---------------------
+.marketing {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-end;
+	position: relative;
+
+	&__img {
+		position: absolute;
+		left: -226px;
+		top: -76px;
+		@media only screen and (max-width : 1200px) {
+			transform: scale(0.8);
+			top: -100px;
+			left: -270px;
+		}
+		@media only screen and (max-width : 1023px) {
+			transform: scale(0.6);
+			left: -305px;
+		}
+		@media only screen and (max-width : 767px) {
+		  display: none;
+		}
+	}
+	&__description {
+		width: 49%;
+		padding: 8px 70px 215px 3px;
+		z-index: 1;
+		position: relative;
+		@media only screen and (max-width : 1200px) {
+			padding-bottom: 100px;
+		}
+		@media only screen and (max-width : 1023px) {
+		   padding-right: 10px;
+			 padding-bottom: 60px;
+		}
+		@media only screen and (max-width : 767px) {
+		  width: 100%;
+			padding:0 0 20px 0;;
+		}
+	}
+}

@@ -4,20 +4,44 @@
 	width: 50%;
 	display: flex;
 	flex-wrap: wrap;
-	float: right;
-	border-left: 1px solid rgba(249, 250, 251, 0.9);
+	border-left: 1px solid rgba(230, 234, 237, 0.9);
+	@media only screen and (max-width : 767px) {
+		width: 100%;
+		border-top: 1px solid rgba(230, 234, 237, 0.9);
+		margin-bottom: 20px;
+	}
 	&__box {
 		width: 50%;
 		height: 302px;
-		border-right: 1px solid rgba(249, 250, 251, 0.9);
-		border-top: 1px solid rgba(249, 250, 251, 0.9);
+		border-right: 1px solid rgba(230, 234, 237, 0.9);
+		border-bottom: 1px solid rgba(230, 234, 237, 0.9);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-end;
 		padding-bottom: 60px;
+		@media only screen and (max-width : 1200px) {
+			height: 255px;
+			padding: 0 20px 50px;
+			text-align: center;
+		}
+		@media only screen and (max-width : 1023px) {
+			height: 215px;
+		}
+		@media only screen and (max-width : 767px) {
+			height: 150px;
+			padding-bottom: 20px;
+
+		}
 	}
 	&__ico {
 		padding-bottom: 30px;
+		@media only screen and (max-width : 1023px) {
+			transform: scale(0.7);
+			padding-bottom: 10px
+		}
+		@media only screen and (max-width : 767px) {
+			transform: scale(0.6);
+		}
 	}
 }

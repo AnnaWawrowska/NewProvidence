@@ -3,4 +3,32 @@
 .hero {
 	width: 48%;
 	padding-top: 342px;
+	position: relative;
+	z-index: 2;
+	@media only screen and (max-width : 1200px) {
+		margin-left: 20px;
+		padding-top: 30vh;
+	}
+	@media only screen and (max-width : 1023px) {
+		width: 80%;
+		text-align: center;
+		margin: 0 auto;
+	}
+	@media only screen and (max-width : 767px) {
+	  width: 100%;
+	}
+	@media only screen and (max-width : 767px) {
+	  padding-top: 30vh;
+	}
+}
+
+.canvas-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	overflow: hidden;
+	@media only screen and (max-width : 1023px) {
+		width: 100%;
+	}
 }

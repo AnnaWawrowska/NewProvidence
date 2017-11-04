@@ -1,29 +1,76 @@
 // ----------------clients---------------------
 
 .clients {
-	height: 110px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 	&__text {
+		position: relative;
 		background-color: $color--gray;
+		padding: 30px 42px 8px 0;
+		box-shadow: -1000px 0 0 1000px $color--gray;
+		@media only screen and (max-width : 1200px) {
+			padding: 20px 5px 8px 30px;
+		}
+		@media only screen and (max-width : 1023px) {
+			padding: 15px 15px 8px 5px;
+		}
+		@media only screen and (max-width : 767px) {
+			padding: 5px 5px;
+			width: 25%;
+		}
+
 		&:after {
 			content: "";
-			position: relative;
-			left: 170px;
-			top: 31px;
+			position: absolute;
+			right: -70px;
+			top: 0;
 			width: 0;
 			height: 0;
 			border-style: solid;
-			border-width: 110px 65px 0 0;
-			border-color: $color--gray transparent transparent transparent;
+			border-width: 110px 70px 0 0;
+			border-color: #f8f8f8 transparent transparent transparent;
+			@media only screen and (max-width : 1200px) {
+				right: -50px;
+				border-width: 110px 50px 0 0;
+			}
+			@media only screen and (max-width : 1023px) {
+				right: -40px;
+				border-width: 80px 40px 0 0;
+			}
 		}
-
 	}
-	&__item {
+	&__items {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		width: 910px;
+		@media only screen and (max-width : 1200px) {
+			width: 80%;
+		}
+		@media only screen and (max-width : 767px) {
+			width: 60%;
+		}
+
+	}
+	&__item {
+		opacity: 0.3;
+		transition: opacity 0.4s ease;
+		@media only screen and (max-width : 1023px) {
+			max-width: 80px;
+			img{
+				width: 100%;
+			}
+		}
+		@media only screen and (max-width : 767px) {
+			&:nth-of-type(2n) {
+				display: none;
+			}
+		}
+
+		&:hover {
+			opacity: 0.9;
+		}
 	}
 }

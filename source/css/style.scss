@@ -7,17 +7,18 @@
 /*            http://en.bem.info/             */
 /* ------------------------------------------ */
 
+
 /* -- Helpers -- */
 @import 'helpers/normalize';
 @import 'helpers/include-media';
 @import 'helpers/fonts';
 @import 'helpers/colors';
-
 @import 'helpers/general';
 @import 'helpers/typography';
 
 /* -- Vendors -- */
 @import 'vendor/font-awesome.min.css';
+@import 'vendor/slick.css';
 /* -- Elements -- */
 @import 'components/header';
 @import 'components/nav';
@@ -28,3 +29,12 @@
 @import 'components/aboutUs';
 @import 'components/experience';
 @import 'components/services';
+@import 'components/recent-work';
+@import 'components/customer';
+@import 'components/slider';
+@import 'components/industries';
+@import 'components/marketing';
+@import 'components/blog';
+@import 'components/post';
+@import 'components/form';
+@import 'components/footer';

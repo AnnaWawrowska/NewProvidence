@@ -1,7 +1,24 @@
 // ----------------Experience------------------
 
 .experience {
-	width: 50%;
+	width: 43%;
 	padding-top: 85px;
+	padding-bottom: 200px;
 	display: inline-block;
+	@media only screen and (max-width : 1200px) {
+		width: 40%;
+		padding-left: 30px;
+		padding-bottom: 125px;
+	}
+	@media only screen and (max-width : 1023px) {
+		padding-bottom: 45px;
+		padding-top: 50px;
+	}
+	@media only screen and (max-width : 767px) {
+	   width: 100%;
+	}
+	@media only screen and (max-width : 767px) {
+	  padding-left: 0;
+		text-align: center;
+	}
 }

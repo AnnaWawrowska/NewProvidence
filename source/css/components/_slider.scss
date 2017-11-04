@@ -1,0 +1,114 @@
+// ----------------Slider---------------------
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  margin: 0 -15px;
+
+
+  &__element {
+    position: relative;
+    margin: 0 15px;
+    @media only screen and (max-width : 1200px) {
+      margin: 0 40px;
+    }
+    @media only screen and (max-width : 1023px) {
+      margin: 0 10px;
+    }
+    &:before {
+      content: '';
+      background-color: $color--darker-gray;
+      position: absolute;
+      opacity: 0.9;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s ease;
+    }
+    &:hover {
+      &:before {
+        background-color: $color--white;
+        opacity: 1;
+      }
+
+      .slider__logo {
+        top: 50px;
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(0.8);
+      }
+      .slider__description {
+        opacity: 1;
+        transform: translateY(10px);
+      }
+    }
+  }
+  &__logo {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transition: top 0.7s ease, transform 1s ease, opacity 0.7s ease;
+    @media only screen and (max-width : 1023px) {
+      transform: translate(-50%,-50%) scale(0.7);
+    }
+  }
+  &__description {
+    padding: 10px;
+    opacity: 0;
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    transition: all  1s ease;
+    transform: translateY(200px);
+    @media only screen and (max-width : 1200px) {
+      bottom: 15%;
+      p {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    @media only screen and (max-width : 767px) {
+      bottom: 30%;
+      a{
+        display: inline-block;
+        margin-top: 10px;
+      }
+    }
+  }
+  &__background {
+    display: block;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+  }
+  &__arrow{
+    width: 55px;
+    height: 55px;
+    border: 1px dashed $color--light-gray;
+    background-color: transparent;
+    color: $color--light-gray;
+    cursor: pointer;
+    @media only screen and (max-width : 1200px) {
+      transform: scale(0.9);
+    }
+  }
+  &__showAll {
+    width: 135px;
+    height: 58px;
+    border: 1px dashed $color--light-gray;
+    background-color: $color--black;
+    color: $color--white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 15px 50px 15px;
+    @media only screen and (max-width : 1200px) {
+      transform: scale(0.9);
+      margin: 0 10px 30px;
+    }
+  }
+}

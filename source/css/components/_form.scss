@@ -1,0 +1,30 @@
+// ------------------form--------------------------
+
+.form {
+	min-width: 272px;
+	background-color: $color--white;
+	position: relative;
+	margin-top: 12px;
+	@media only screen and (max-width : 767px) {
+	  margin: 10px;
+	}
+
+	&__mail{
+		border: none;
+		font-family: $font--secondary;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 43px;
+		padding-left: 10px;
+		color: $color--white-2;
+		width: 80%;
+		&::placeholder {
+			color: $color--white-3;
+		}
+	}
+	&__submit {
+		position: absolute;
+		right: 10px;
+		bottom: 13px;
+	}
+}

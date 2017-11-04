@@ -1,0 +1,40 @@
+// ------------------Blog---------------------------
+
+.blog {
+	&__title {
+		max-width: 480px;
+		margin: 0 auto;
+		text-align: center;
+		padding-bottom: 55px;
+	}
+	&__posts {
+		display: flex;
+		justify-content: space-between;
+		@media only screen and (max-width : 1200px) {
+			margin: 0 20px;
+		}
+		@media only screen and (max-width : 767px) {
+		  flex-direction: column;
+			margin: 0;
+		}
+	}
+	&__more {
+		color: $color--white-2;
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+		cursor: pointer;
+		width: 100px;
+		margin: 85px auto 68px;
+		display: block;
+		@media only screen and (max-width : 767px) {
+		  margin: 30px auto;
+		}
+		&:before {
+			content: '+';
+			display: inline-block;
+			padding-right: 10px;
+			font-size: 20px;
+		}
+	}
+}

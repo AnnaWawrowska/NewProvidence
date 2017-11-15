@@ -721,9 +721,22 @@ p {
 /* -- Elements -- */
 .header {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   top: 27px;
   width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    position: fixed;
+    top: 0;
+    padding: 5px 0;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.header--background {
+  background-color: #d3d3d3;
 }
 
 .nav {
@@ -738,7 +751,7 @@ p {
 
 @media only screen and (max-width: 767px) {
   .nav {
-    display: none;
+    margin-right: 0;
   }
 }
 
@@ -747,6 +760,40 @@ p {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 5px;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav__list {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s ease, opacity 0.5s ease, background-color 0.3s ease;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: 100%;
+    padding: 10px 15px 10px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .nav__list {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-right: 0;
+  }
+}
+
+.nav__list--visibile {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav__list--background {
+  background-color: #d3d3d3;
 }
 
 .nav__item {
@@ -773,6 +820,72 @@ p {
 .nav__item:hover:after {
   opacity: 0.9;
   top: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav__item {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .nav__item {
+    padding-bottom: 10px;
+    padding-right: 15px;
+    text-align: right;
+  }
+}
+
+.nav__toggle {
+  display: none;
+  height: 40px;
+  border: 3px solid white;
+  width: 40px;
+  background-color: transparent;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  cursor: pointer;
+  padding: 5px 0;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav__toggle {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.nav__toggle--1, .nav__toggle--2, .nav__toggle--3 {
+  border: 2px solid #ffffff;
+  width: 25px;
+  border-radius: 20%;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.nav__toggle--active .nav__toggle--1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+      -ms-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav__toggle--active .nav__toggle--2 {
+  opacity: 0;
+}
+
+.nav__toggle--active .nav__toggle--3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+      -ms-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .section__heading {

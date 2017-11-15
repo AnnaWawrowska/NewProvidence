@@ -2,16 +2,38 @@
 
 .nav {
 	margin-right: -139px;
-@media only screen and (max-width : 1500px) {
-  margin-right: -5px;
-}
-@media only screen and (max-width : 767px) {
-  display: none;
-}
+	@media only screen and (max-width : 1500px) {
+		margin-right: -5px;
+	}
+	@media only screen and (max-width : 767px) {
+		margin-right: 0;
 
+	}
 	&__list {
 		display: flex;
 		margin-bottom: 5px;
+		justify-content: space-around;
+		@media only screen and (max-width : 767px) {
+			visibility: hidden;
+			opacity: 0;
+			transition: visibility 0s ease, opacity 0.5s ease, background-color 0.3s ease;
+			position: absolute;
+			right: 0;
+			top: 55px;
+			width: 100%;
+			padding: 10px 15px 10px;
+		}
+		@media only screen and (max-width : 576px) {
+			flex-direction: column;
+			padding-right: 0;
+		}
+		&--visibile {
+			visibility: visible;
+			opacity: 1;
+		}
+		&--background {
+			background-color:  $color--white-3;
+		}
 	}
 	&__item {
 		color: $color--white;
@@ -35,6 +57,49 @@
 			&:after{
 				opacity: 0.9;
 				top: 15px;
+			}
+		}
+		@media only screen and (max-width : 767px) {
+			font-size: 16px;
+		}
+		@media only screen and (max-width : 576px) {
+			padding-bottom: 10px;
+			padding-right: 15px;
+			text-align: right;
+
+		}
+	}
+	&__toggle {
+		display: none;
+		height: 40px;
+		border: 3px solid white;
+		width: 40px;
+		background-color: transparent;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		cursor: pointer;
+		padding: 5px 0;
+		position: relative;
+		@media only screen and (max-width : 767px) {
+			display: flex;
+		}
+		&--1, &--2, &--3 {
+			border: 2px solid $color--white;
+			width: 25px;
+			border-radius: 20%;
+			display: block;
+			transition: all 0.3s ease;
+		}
+		&--active {
+			.nav__toggle--1 {
+				transform: rotate(-45deg) translate(-5px, 6px);
+			}
+			.nav__toggle--2 {
+				opacity: 0;
+			}
+			.nav__toggle--3 {
+				transform: rotate(45deg) translate(-5px, -6px);
 			}
 		}
 	}

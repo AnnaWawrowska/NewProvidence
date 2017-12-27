@@ -5,8 +5,8 @@
 	background-color: $color--white;
 	position: relative;
 	margin-top: 12px;
-	@media only screen and (max-width : 767px) {
-	  margin: 10px;
+	@include media('<md') {
+		margin: 10px;
 	}
 
 	&__mail{

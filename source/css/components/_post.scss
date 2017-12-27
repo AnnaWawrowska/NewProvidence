@@ -1,13 +1,13 @@
 // ------------------Post--------------------------
 .post {
 	max-width: 32%;
-	@media only screen and (max-width : 767px) {
+	@include media('<md') {
 	  max-width: 100%;
 		margin-bottom: 60px;
 	}
 	&__img {
 		padding-bottom: 15px;
-		@media only screen and (max-width : 1200px) {
+		@include media('<xl') {
 		  width: 100%;
 		}
 	}
@@ -16,7 +16,7 @@
 		padding-bottom: 8px;
 		text-transform: none;
 		    line-height: 25px;
-				@media only screen and (max-width : 767px) {
+				@include media('<md') {
 				  text-align: center;
 				}
 		span{
@@ -30,7 +30,7 @@
 			width: 31px;
 			border: 2px solid #f16522;
 			margin-top: 16px;
-			@media only screen and (max-width : 767px) {
+			@include media('<md') {
 			  margin: 0 auto;
 				margin-top: 10px;
 			}
@@ -39,7 +39,7 @@
 	&__text {
 		line-height: 25px;
 		padding-bottom: 1px;
-		@media only screen and (max-width : 767px) {
+		@include media('<md') {
 		  padding-bottom: 5px;
 		}
 	}

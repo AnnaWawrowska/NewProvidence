@@ -11,13 +11,13 @@
 		flex-direction: column;
 		margin-bottom: 30px;
 		position: relative;
-		@media only screen and (max-width : 1200px) {
+		@include media('<xl') {
 			width: 23%;
 			padding: 0 20px;
 			text-align: center;
 		}
-		@media only screen and (max-width : 767px) {
-		  width: 48%;
+		@include media('<md') {
+			width: 48%;
 			height: 130px;
 			margin-bottom: 10px;
 		}
@@ -40,8 +40,8 @@
 		&--big {
 			width: 49%;
 			align-self: flex-start;
-			@media only screen and (max-width : 767px) {
-			  width: 100%;
+			@include media('<md') {
+				width: 100%;
 				padding-bottom: 20px;
 			}
 		}
@@ -54,8 +54,8 @@
 	&__picture {
 		padding-top: 35px;
 		padding-bottom: 10px;
-		@media only screen and (max-width : 1200px) {
-		  padding-top: 0;
+		@include media('<xl') {
+			padding-top: 0;
 		}
 	}
 }

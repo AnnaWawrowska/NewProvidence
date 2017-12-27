@@ -5,33 +5,36 @@
 	width: 50%;
 	float: right;
 	padding-left: 10px;
-	@media only screen and (max-width : 1200px) {
+	@include media('<xl') {
 		padding-right: 40px;
 	}
-	@media only screen and (max-width : 1023px) {
+	@include media('<lg') {
 		padding-top: 60px;
 		padding-right: 5px;
 	}
-	@media only screen and (max-width : 767px) {
-	  width: 100%;
+
+	@include media('<md') {
+		width: 100%;
+		padding-top: 0;
 	}
-	@media only screen and (max-width : 767px) {
-	  padding-top: 0; 
-	}
+
+
 
 	&__img {
 		position: absolute;
 		bottom: 0;
 		left: 5%;
-		@media only screen and (max-width : 1200px) {
+
+		@include media('<xl') {
 			width: 40%;
 		}
-		@media only screen and (max-width : 1023px) {
-		  width: 45%;
+		@include media('<lg') {
+			width: 45%;
 			left: 0;
 		}
-		@media only screen and (max-width : 767px) {
-		  display: none;
+
+		@include media('<md') {
+			display: none;
 		}
 	}
 }

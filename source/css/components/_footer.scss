@@ -4,30 +4,30 @@
 	background-color: $color--gray-2;
 	padding-top: 52px;
 	padding-bottom: 55px;
-	@media only screen and (max-width : 767px) {
+	@include media('<md') {
 		text-align: center;
 		padding: 30px 0 0;
 	}
 
-&__item {
-	min-width: 23%;
-	@media only screen and (max-width : 1023px) {
-	  &:last-of-type {
-			width: 100%;
-		}
-		@media only screen and (max-width : 767px) {
-			margin: 0 auto;
-			padding-bottom: 20px;
-			width: 100%;
+	&__item {
+		min-width: 23%;
+		@include media('<lg') {
+			&:last-of-type {
+				width: 100%;
+			}
+			@include media('<md') {
+				margin: 0 auto;
+				padding-bottom: 20px;
+				width: 100%;
+			}
+
 		}
 
-	}
-
-	&__headlines {
-		line-height: 35px;
-		@media only screen and (max-width : 1200px) {
-		  line-height: 20px;
+		&__headlines {
+			line-height: 35px;
+			@include media('<xl') {
+				line-height: 20px;
+			}
 		}
 	}
-}
 }

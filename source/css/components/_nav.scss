@@ -2,10 +2,10 @@
 
 .nav {
 	margin-right: -139px;
-	@media only screen and (max-width : 1500px) {
+	@include media('<xxl')  {
 		margin-right: -5px;
 	}
-	@media only screen and (max-width : 767px) {
+	@include media('<md') {
 		margin-right: 0;
 
 	}
@@ -13,7 +13,7 @@
 		display: flex;
 		margin-bottom: 5px;
 		justify-content: space-around;
-		@media only screen and (max-width : 767px) {
+		@include media('<md') {
 			visibility: hidden;
 			opacity: 0;
 			transition: visibility 0s ease, opacity 0.5s ease, background-color 0.3s ease;
@@ -23,15 +23,13 @@
 			width: 100%;
 			padding: 10px 15px 10px;
 		}
-		@media only screen and (max-width : 576px) {
+		@include media('<sm') {
 			flex-direction: column;
 			padding-right: 0;
 		}
 		&--visibile {
 			visibility: visible;
 			opacity: 1;
-		}
-		&--background {
 			background-color:  $color--white-3;
 		}
 	}
@@ -59,10 +57,10 @@
 				top: 15px;
 			}
 		}
-		@media only screen and (max-width : 767px) {
+		@include media('<md') {
 			font-size: 16px;
 		}
-		@media only screen and (max-width : 576px) {
+		@include media('<sm') {
 			padding-bottom: 10px;
 			padding-right: 15px;
 			text-align: right;
@@ -81,7 +79,7 @@
 		cursor: pointer;
 		padding: 5px 0;
 		position: relative;
-		@media only screen and (max-width : 767px) {
+		@include media('<md') {
 			display: flex;
 		}
 		&--1, &--2, &--3 {

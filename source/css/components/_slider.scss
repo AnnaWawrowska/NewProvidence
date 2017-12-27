@@ -11,10 +11,10 @@
   &__element {
     position: relative;
     margin: 0 15px;
-    @media only screen and (max-width : 1200px) {
+    @include media('<xl') {
       margin: 0 40px;
     }
-    @media only screen and (max-width : 1023px) {
+    @include media('<lg') {
       margin: 0 10px;
     }
     &:before {
@@ -52,7 +52,7 @@
     left: 50%;
     opacity: 1;
     transition: top 0.7s ease, transform 1s ease, opacity 0.7s ease;
-    @media only screen and (max-width : 1023px) {
+    @include media('<lg') {
       transform: translate(-50%,-50%) scale(0.7);
     }
   }
@@ -64,14 +64,14 @@
     right: 0;
     transition: all  1s ease;
     transform: translateY(200px);
-    @media only screen and (max-width : 1200px) {
+    @include media('<xl') {
       bottom: 15%;
       p {
         font-size: 12px;
         line-height: 16px;
       }
     }
-    @media only screen and (max-width : 767px) {
+    @include media('<md') {
       bottom: 30%;
       a{
         display: inline-block;
@@ -93,7 +93,8 @@
     background-color: transparent;
     color: $color--light-gray;
     cursor: pointer;
-    @media only screen and (max-width : 1200px) {
+    outline: none;
+    @include media('<xl') {
       transform: scale(0.9);
     }
   }
@@ -106,7 +107,8 @@
     text-transform: uppercase;
     cursor: pointer;
     margin: 0 15px 50px 15px;
-    @media only screen and (max-width : 1200px) {
+    outline: none;
+    @include media('<xl') {
       transform: scale(0.9);
       margin: 0 10px 30px;
     }

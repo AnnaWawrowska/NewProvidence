@@ -46,13 +46,13 @@ body {
 	width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
-	@media only screen and (max-width : 1200px) {
+	@include media('<xl') {
 	  width: 960px;
 	}
-	@media only screen and (max-width : 1023px) {
+	@include media('<lg') {
 	   width: 720px;
 	}
-	@media only screen and (max-width : 767px) {
+	@include media('<md') {
 	  	width: 100%;
 	}
 }

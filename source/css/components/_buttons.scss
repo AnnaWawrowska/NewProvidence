@@ -16,8 +16,9 @@
 	position: relative;
 	z-index: 3;
 	box-shadow: 5px 5px 18px 3px $color--white-3;
-	@media only screen and (max-width : 767px) {
-	  transform: scale(0.7);
+
+	@include media('<md') {
+		transform: scale(0.7);
 	}
 
 	&:hover {
@@ -42,8 +43,8 @@
 		transition: transform 0.9s ease;
 		cursor: pointer;
 
-		@media only screen and (max-width : 767px) {
-		  transform: rotate(45deg) scale(0.8);
+		@include media('<md') {
+			transform: rotate(45deg) scale(0.8);
 			bottom: 10vh;
 		}
 		&:hover {
@@ -64,9 +65,11 @@
 		cursor: pointer;
 		letter-spacing: 2.2px;
 		transition: background-color 0.4s ease;
-		@media only screen and (max-width : 1023px) {
-		  transform: scale(0.8);
+
+		@include media('<lg') {
+			transform: scale(0.8);
 		}
+
 		&:hover {
 			background-color: darken($color--orange, 10);
 		}
@@ -79,9 +82,11 @@
 		margin-left: 26px;
 		transition: background-color 0.3s ease, color 0.5s ease;
 		box-shadow: 3px 3px 20px -4px $color--orange;
-		@media only screen and (max-width : 767px) {
-		  margin: 0;
+
+		@include media('<md') {
+			margin: 0;
 		}
+
 		&:hover {
 			background-color: $color--orange;
 			color: $color--white;

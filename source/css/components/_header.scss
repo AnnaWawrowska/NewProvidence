@@ -5,13 +5,13 @@
 	z-index: 4;
 	top: 27px;
 	width: 100%;
-	@media only screen and (max-width : 767px) {
+	@include media('<md') {
 		position: fixed;
 		top: 0;
 		padding: 5px 0;
 		transition: background-color 0.3s ease;
 	}
-	&--background {
+	&--scrolled, &--nav-open {
 		background-color: $color--white-3;
 	}
 }

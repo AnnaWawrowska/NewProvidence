@@ -5,10 +5,10 @@
 	margin: 0 auto;
 	text-align: center;
 	padding-bottom: 107px;
-	@media only screen and (max-width : 1023px) {
+	@include media('<lg') {
 	  padding-bottom: 40px;
 	}
-	@media only screen and (max-width : 767px) {
+	@include media('<md') {
 	  width: 100%;
 		padding-bottom: 30px;
 	}

@@ -10,11 +10,12 @@
 	&__posts {
 		display: flex;
 		justify-content: space-between;
-		@media only screen and (max-width : 1200px) {
+		@include media('<xl') {
 			margin: 0 20px;
 		}
-		@media only screen and (max-width : 767px) {
-		  flex-direction: column;
+
+		@include media('<md') {
+			flex-direction: column;
 			margin: 0;
 		}
 	}
@@ -27,9 +28,10 @@
 		width: 100px;
 		margin: 85px auto 68px;
 		display: block;
-		@media only screen and (max-width : 767px) {
-		  margin: 30px auto;
+		@include media('<md') {
+			margin: 30px auto;
 		}
+
 		&:before {
 			content: '+';
 			display: inline-block;
